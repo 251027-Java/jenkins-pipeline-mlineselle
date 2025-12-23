@@ -46,7 +46,7 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    sh 'docker build -t my-app:${env.BUILD_NUMBER} .'
+                    sh "docker build -t my-app:${env.BUILD_NUMBER} ."
                     echo '✅ Docker image built successfully!'
                 }
             }
