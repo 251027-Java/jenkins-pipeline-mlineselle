@@ -2,6 +2,7 @@ pipeline {
     agent any
     
     tools {
+        maven 'MAVEN'
         jdk 'JDK21'  // Must match the JDK name configured in Jenkins Tools
     }
     
@@ -23,21 +24,22 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'mvn clean compile'
+                sh 'chmod +x mvnw'
+                sh './mvnw clean compile'
                 echo 'Build completed successfully!'
             }
         }
-
+        
         stage('Test') {
             steps {
-                sh 'mvn test'
+                sh './mvnw test'
                 echo 'Tests completed successfully!'
             }
         }
-
+        
         stage('Package') {
             steps {
-                sh 'mvn package -DskipTests'
+                sh './mvnw package -DskipTests'
                 echo 'Package completed successfully!'
             }
         }
