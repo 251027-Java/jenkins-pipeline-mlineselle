@@ -2,7 +2,6 @@ pipeline {
     agent any
     
     tools {
-        docker 'Docker'
         maven 'MAVEN'
         jdk 'JDK21'  // Must match the JDK name configured in Jenkins Tools
     }
@@ -41,6 +40,12 @@ pipeline {
             steps {
                 sh 'mvn package -DskipTests'
                 echo '✅ Package completed successfully!'
+            }
+        }
+
+        stage('Check Docker') {
+            steps {
+                sh 'docker --version'
             }
         }
 
