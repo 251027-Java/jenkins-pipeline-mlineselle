@@ -1,8 +1,3 @@
-# Jenkinsfile Template for Student Exercise
-# 
-# This file should be named "Jenkinsfile" (no extension) and placed
-# in the root of your Git repository.
-
 pipeline {
     agent any
     
