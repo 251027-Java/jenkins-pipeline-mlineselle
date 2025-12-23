@@ -23,22 +23,21 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'chmod +x mvnw'
-                sh './mvnw clean compile'
+                sh 'mvn clean compile'
                 echo 'Build completed successfully!'
             }
         }
-        
+
         stage('Test') {
             steps {
-                sh './mvnw test'
+                sh 'mvn test'
                 echo 'Tests completed successfully!'
             }
         }
-        
+
         stage('Package') {
             steps {
-                sh './mvnw package -DskipTests'
+                sh 'mvn package -DskipTests'
                 echo 'Package completed successfully!'
             }
         }
