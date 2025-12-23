@@ -1,7 +1,5 @@
 # Jenkinsfile Template for Student Exercise
 # 
-# TODO: Complete the stages below to create a working CI/CD pipeline
-# 
 # This file should be named "Jenkinsfile" (no extension) and placed
 # in the root of your Git repository.
 
@@ -30,26 +28,23 @@ pipeline {
         
         stage('Build') {
             steps {
-                // TODO: Complete this stage
-                // 1. Make mvnw executable: sh 'chmod +x mvnw'
-                // 2. Run Maven compile: sh './mvnw clean compile'
-                echo 'TODO: Add build commands here'
+                sh 'chmod +x mvnw'
+                sh './mvnw clean compile'
+                echo 'Build completed successfully!'
             }
         }
         
         stage('Test') {
             steps {
-                // TODO: Complete this stage
-                // Run Maven tests: sh './mvnw test'
-                echo 'TODO: Add test commands here'
+                sh './mvnw test'
+                echo 'Tests completed successfully!'
             }
         }
         
         stage('Package') {
             steps {
-                // TODO: Complete this stage
-                // Create JAR file: sh './mvnw package -DskipTests'
-                echo 'TODO: Add package commands here'
+                sh './mvnw package -DskipTests'
+                echo 'Package completed successfully!'
             }
         }
     }
