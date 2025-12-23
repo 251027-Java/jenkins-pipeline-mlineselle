@@ -2,6 +2,7 @@ pipeline {
     agent any
     
     tools {
+        docker 'Docker'
         maven 'MAVEN'
         jdk 'JDK21'  // Must match the JDK name configured in Jenkins Tools
     }
