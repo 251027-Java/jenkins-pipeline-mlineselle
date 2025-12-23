@@ -241,9 +241,9 @@ stage('Docker Build') {
 ---
 
 ## Deliverables
-1. [ ] Screenshot of Jenkins dashboard with successful build
-2. [ ] Screenshot of Console Output showing all stages passed
-3. [ ] Your completed `Jenkinsfile` (committed to Git)
+1. [x] Screenshot of Jenkins dashboard with successful build
+2. [x] Screenshot of Console Output showing all stages passed
+3. [x] Your completed `Jenkinsfile` (committed to Git)
 4. [ ] (Bonus) Screenshot showing a failed build, then fixed
 
 ## Troubleshooting
