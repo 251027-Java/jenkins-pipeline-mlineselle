@@ -43,20 +43,20 @@ pipeline {
             }
         }
 
-        stage('Check Docker') {
-            steps {
-                sh 'docker --version'
-            }
-        }
+        // stage('Check Docker') {
+        //     steps {
+        //         sh 'docker --version'
+        //     }
+        // }
 
-        stage('Docker Build') {
-            steps {
-                script {
-                    sh "docker build -t my-app:${env.BUILD_NUMBER} ."
-                    echo '✅ Docker image built successfully!'
-                }
-            }
-        }
+        // stage('Docker Build') {
+        //     steps {
+        //         script {
+        //             sh "docker build -t my-app:${env.BUILD_NUMBER} ."
+        //             echo '✅ Docker image built successfully!'
+        //         }
+        //     }
+        // }
     }
     
     post {
