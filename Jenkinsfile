@@ -25,21 +25,21 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn clean compile'
-                echo 'Build completed successfully!'
+                echo '✅ Build completed successfully!'
             }
         }
 
         stage('Test') {
             steps {
                 sh 'mvn test'
-                echo 'Tests completed successfully!'
+                echo '✅ Tests completed successfully!'
             }
         }
 
         stage('Package') {
             steps {
                 sh 'mvn package -DskipTests'
-                echo 'Package completed successfully!'
+                echo '✅ Package completed successfully!'
             }
         }
     }
